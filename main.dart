@@ -9,10 +9,19 @@ to be
 or
 not to be
 ''';
+  // var engagementRate;
+
   var hours = screentime.toInt();
   var minutes = screentime - hours;
   minutes = minutes * minsConst;
   // print(minutes);
+
+  // using if statements
+  if (screentime > 50) {
+    print('Good engagement');
+  } else {
+    print('Do not have enough engagement');
+  }
 
   print('My Username is $userName');
   print('My follow Count is $followCount people');
