@@ -1,3 +1,9 @@
+enum Content {
+  post,
+  reel,
+  story,
+}
+
 void main() {
   const minsConst = 60;
   var userName = 'aaronPeter';
@@ -10,6 +16,10 @@ or
 not to be
 ''';
   var postCount = 5;
+  var reelCount = 10;
+  var storyCount = 4;
+  var selectedContent = Content.story;
+
   // var engagementRate;
 
   var hours = screentime.toInt();
@@ -23,8 +33,22 @@ not to be
   } else {
     print('Do not have enough engagement');
   }
-  for (var i = 1; i <= postCount; i++) {
-    print('Post number $i');
+  switch (selectedContent) {
+    case Content.post:
+      for (var i = 1; i <= postCount; i++) {
+        print('Post number $i');
+      }
+      break;
+    case Content.reel:
+      for (var i = 1; i <= reelCount; i++) {
+        print('Reel number $i');
+      }
+      break;
+    case Content.story:
+      for (var i = 1; i <= storyCount; i++) {
+        print('Story number $i');
+      }
+      break;
   }
 
   print('My Username is $userName');
