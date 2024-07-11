@@ -9,6 +9,7 @@ to be
 or
 not to be
 ''';
+  var postCount = 5;
   // var engagementRate;
 
   var hours = screentime.toInt();
@@ -17,10 +18,13 @@ not to be
   // print(minutes);
 
   // using if statements
-  if (screentime > 50) {
+  if (screentime >= 50) {
     print('Good engagement');
   } else {
     print('Do not have enough engagement');
+  }
+  for (var i = 1; i <= postCount; i++) {
+    print('Post number $i');
   }
 
   print('My Username is $userName');
